@@ -16,17 +16,30 @@
 }
 
 /* Imagen de fondo por defecto */
-header {
-    background-image: url('https://raw.githubusercontent.com/SofiaCrivisqui/Portfolio/refs/heads/master/recursos/banner.jpg');
+header  {
+    background-image: url('https://raw.githubusercontent.com/SofiaCrivisqui/Portfolio/refs/heads/master/recursos/banner.jpg') !important;
     background-size: cover;
     background-position: center;
+    text-align: center;
+    height: 250px; /* Ajusta la altura según tus necesidades */
 }
+.titulo-grande {
+    font-size: 2em !important; /* Puedes ajustar el tamaño según tus necesidades */
+    color: #000000;
+}
+.texto-colorido { color: #2c2c2c;}
 
 /* Imagen de fondo para dispositivos móviles */
 @media (max-width: 768px) {
-    header {
-        background-image: url('https://raw.githubusercontent.com/SofiaCrivisqui/Portfolio/refs/heads/master/recursos/bannermobile.jpg');
+    header  {
+        background-image: url('https://raw.githubusercontent.com/SofiaCrivisqui/Portfolio/refs/heads/master/recursos/bannermobile.jpg') !important;
     }
+    .titulo-grande {
+        font-size: 1em !important; /* Puedes ajustar el tamaño según tus necesidades */
+        color: #000000;
+        padding: 30px
+    }
+    
 }
 
 footer {
@@ -35,3 +48,4 @@ footer {
     padding: 20px 0;
     text-align: center;
 }
+
