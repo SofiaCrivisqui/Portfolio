@@ -1,0 +1,30 @@
+
+/*--------------------------------------------- card index----------------------------------- */
+
+.card-link {
+    text-decoration: none !important; /* Quita el subrayado */
+    color: inherit !important; /* Mantiene el color original del texto */
+    display: block; /* Asegura que el enlace ocupe toda la card */
+}
+
+.card-link .card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.card-link .card:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Imagen de fondo por defecto */
+header {
+    background-image: url('./recursos/banner.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Imagen de fondo para dispositivos móviles */
+@media (max-width: 768px) {
+    header {
+        background-image: url('./recursos/bannermobile.jpg');
+    }
+}
