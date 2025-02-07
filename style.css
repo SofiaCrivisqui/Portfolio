@@ -17,7 +17,7 @@
 
 /* Imagen de fondo por defecto */
 header {
-    background-image: url('./recursos/banner.jpg');
+    background-image: url('/recursos/banner.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -25,6 +25,6 @@ header {
 /* Imagen de fondo para dispositivos móviles */
 @media (max-width: 768px) {
     header {
-        background-image: url('./recursos/bannermobile.jpg');
+        background-image: url('/recursos/bannermobile.jpg');
     }
 }
