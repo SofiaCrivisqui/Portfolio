@@ -48,4 +48,101 @@ footer {
     padding: 20px 0;
     text-align: center;
 }
+.portada-proyecto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #a2a6a7;
+}
 
+.contenido {
+    width: 50%;
+}
+
+.contenido h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contenido p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.mockup {
+    width: 70%;
+    text-align: center;
+}
+
+.mockup img {
+    max-width: 100%;
+    height: auto;
+}
+
+.detalle-proyecto, .habilidades {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+.habilidades .iconos img {
+    width: 50px;
+    height: auto;
+}
+.cta {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    width: 80%;
+    text-align: center;
+}
+
+.detalle-proyecto, .habilidades {
+    padding: 40px;
+}
+
+.habilidades .iconos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.habilidades .iconos div {
+    text-align: center;
+}
+
+.cta {
+    margin: 30px;
+}
+
+.btn {
+    text-decoration: none;
+    background: #d57869;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #333333;
+}
