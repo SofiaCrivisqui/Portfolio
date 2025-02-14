@@ -198,8 +198,9 @@ ul {
     }
 
     .mockup img {
-        max-width: 100%; /* Asegura que la imagen no desborde */
-        height: auto;
+        width: 100%; /* Asegura que la imagen no desborde */
+        height: 100% !important;
+        background: url("./recursos/./portadamobile.jpg")
     }
 
     .contenido {
@@ -214,7 +215,7 @@ ul {
         gap: 6px; /* Ajusta el espacio entre el check y el texto */
     }
     .contenido h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
         margin-bottom: 20px;
         color: #ffffff;
         text-align: center;
