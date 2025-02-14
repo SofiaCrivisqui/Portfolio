@@ -55,7 +55,7 @@ footer {
     padding: 50px;
     max-width: 1200px;
     margin: auto;
-    background-color: #a2a6a7;
+    background-color: #4c4c4c;
 }
 
 .contenido {
@@ -65,6 +65,7 @@ footer {
 .contenido h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    color: #ffffff;
 }
 
 .contenido p {
@@ -91,6 +92,23 @@ footer {
     max-width: 100%;
     height: auto;
 }
+.detalle-proyecto {
+    text-align: center; /* Centra el contenido del div */
+}
+
+.detalle-proyecto ul {
+    display: inline-block; /* Evita que la lista ocupe todo el ancho */
+    text-align: left; /* Mantiene el texto alineado a la izquierda dentro del bloque */
+    padding-left: 0; /* Elimina padding extra */
+}
+
+.detalle-proyecto li {
+    list-style: none; /* Elimina viñetas por defecto */
+    display: flex;
+    align-items: center; /* Alinea el check con el texto */
+    gap: 8px; /* Espaciado entre el check y el texto */
+}
+
 
 .detalle-proyecto, .habilidades {
     max-width: 800px;
@@ -145,4 +163,50 @@ footer {
 
 .btn:hover {
     background: #333333;
+}
+
+ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding por defecto */
+}
+@media (max-width: 768px) {
+    .portada-proyecto {
+        display: flex;
+        flex-direction: column-reverse; /* Invierte el orden en mobile */
+        align-items: center;
+        text-align: center;
+    }
+
+    .mockup img {
+        max-width: 100%; /* Asegura que la imagen no desborde */
+        height: auto;
+    }
+
+    .contenido {
+        margin-top: 20px;
+    }
+    .detalle-proyecto ul {
+        width: 90%; /* Reduce el ancho en pantallas pequeñas */
+    }
+
+    .detalle-proyecto li {
+        font-size: 14px; /* Reduce el tamaño del texto si es necesario */
+        gap: 6px; /* Ajusta el espacio entre el check y el texto */
+    }
+}
+.lista-check {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-check li {
+    display: flex;
+    align-items: center; /* Alinea el ícono y el texto */
+    gap: 10px; /* Espaciado entre ícono y texto */
+    font-size: 16px;
+}
+
+.lista-check i {
+    color: #d57869; /* Color del check */
+    font-size: 18px;
 }
