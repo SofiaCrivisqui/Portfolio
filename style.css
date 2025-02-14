@@ -53,8 +53,8 @@ footer {
     align-items: center;
     justify-content: space-between;
     padding: 50px;
-    max-width: 1200px;
-    margin: auto;
+   
+    
     background-color: #4c4c4c;
 }
 
@@ -119,6 +119,7 @@ footer {
 .habilidades .iconos img {
     width: 50px;
     height: auto;
+    padding: 5px;
 }
 .cta {
     text-align: center;
@@ -134,7 +135,7 @@ footer {
 }
 
 .detalle-proyecto, .habilidades {
-    padding: 40px;
+    padding: 20px;
 }
 
 .habilidades .iconos {
@@ -169,12 +170,31 @@ ul {
     list-style-type: none; /* Elimina los puntos de la lista */
     padding: 0; /* Elimina el padding por defecto */
 }
+
+
+.lista-check {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-check li {
+    display: flex;
+    align-items: center; /* Alinea el ícono y el texto */
+    gap: 10px; /* Espaciado entre ícono y texto */
+    font-size: 16px;
+}
+
+.lista-check i {
+    color: #d57869; /* Color del check */
+    font-size: 18px;
+}
 @media (max-width: 768px) {
     .portada-proyecto {
         display: flex;
         flex-direction: column-reverse; /* Invierte el orden en mobile */
         align-items: center;
         text-align: center;
+        padding: 2px;
     }
 
     .mockup img {
@@ -193,20 +213,16 @@ ul {
         font-size: 14px; /* Reduce el tamaño del texto si es necesario */
         gap: 6px; /* Ajusta el espacio entre el check y el texto */
     }
-}
-.lista-check {
-    list-style: none;
-    padding: 0;
-}
-
-.lista-check li {
-    display: flex;
-    align-items: center; /* Alinea el ícono y el texto */
-    gap: 10px; /* Espaciado entre ícono y texto */
-    font-size: 16px;
-}
-
-.lista-check i {
-    color: #d57869; /* Color del check */
-    font-size: 18px;
+    .contenido h1 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: #ffffff;
+        text-align: center;
+    }
+    .contenido p {
+        font-size: 1rem;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+  
 }
