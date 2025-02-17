@@ -394,3 +394,15 @@ ul {
     }
 }
 
+.btn-sona{
+    text-decoration: none;
+    background: #03f551;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px 0px;
+    transition: 0.3s;
+}
+.btn-sona:hover {
+    background: #333333;
+}
