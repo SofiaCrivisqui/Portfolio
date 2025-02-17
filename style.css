@@ -137,6 +137,13 @@ ul {
     color: #d57869; /* Color del check */
     font-size: 18px;
 }
+.lista-check {
+    display: inline-block; /* Hace que la lista se ajuste al contenido y respete el centrado */
+    text-align: left; /* Mantiene la alineación del texto dentro de la lista */
+    list-style: none; /* Elimina los estilos predeterminados de la lista */
+    padding: 0; /* Elimina el padding predeterminado */
+}
+
 .portada-proyecto {
     width: 100%;
     max-width: 100%;
@@ -163,7 +170,7 @@ ul {
     min-height: 20vh; /* Ocupa toda la altura de la ventana */
     padding: 20px; /* Espaciado interno */
     box-sizing: border-box; /* Incluye el padding en el tamaño total */
-    background-color: #161616;
+    background-color: #181818;
 }
 .contenido p{
     color: #bbbbbb;}
@@ -176,8 +183,13 @@ ul {
 
 
 
+
 .detalle-proyecto {
-    text-align: center; /* Centra el contenido del div */
+    
+    text-align: center !important; /* Centra el contenido dentro del div */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
 }
 
 .detalle-proyecto ul {
@@ -208,9 +220,7 @@ ul {
         text-align: center;
         padding: 2px;
     }
-    .contenido {
-        margin-top: 20px;
-    }
+    
     .mockup img {
         width: 100%;
         height: auto; /* Mantiene la proporción de la imagen */
@@ -236,7 +246,9 @@ ul {
         font-size: 14px; /* Reduce el tamaño del texto si es necesario */
         gap: 6px; /* Ajusta el espacio entre el check y el texto */
     }
+    .detalle-proyecto{ text-align: center !important;}
 }
+
 
 
 
