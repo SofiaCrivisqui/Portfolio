@@ -364,9 +364,7 @@ ul {
         text-align: center;
         padding: 2px;
     }
-    .contenido-luxe {
-        margin-top: 20px;
-    }
+    
     .mockup-luxe img {
         width: 100%;
         height: auto; /* Mantiene la proporción de la imagen */
@@ -392,6 +390,11 @@ ul {
         font-size: 14px; /* Reduce el tamaño del texto si es necesario */
         gap: 6px; /* Ajusta el espacio entre el check y el texto */
     }
+    .mockup-sona img {
+        width: 100%;
+        height: auto; /* Mantiene la proporción de la imagen */
+        display: block;
+        content: url("./recursos/portadasona.jpg")
 }
 
 .btn-sona{
