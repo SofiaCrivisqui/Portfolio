@@ -1,4 +1,7 @@
-
+body, html {
+    width: 100%;
+    overflow-x: hidden; /* Evita scroll horizontal */
+}
 /*--------------------------------------------- card index----------------------------------- */
 
 .card-link {
@@ -48,31 +51,7 @@ footer {
     padding: 20px 0;
     text-align: center;
 }
-.portada-proyecto {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
-   
-    
-    background-color: #4c4c4c;
-}
 
-.contenido {
-    width: 50%;
-}
-
-.contenido h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #ffffff;
-}
-
-.contenido p {
-    font-size: 1.2rem;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
 
 .btn {
     display: inline-block;
@@ -83,39 +62,9 @@ footer {
     border-radius: 5px;
 }
 
-.mockup {
-    width: 70%;
-    text-align: center;
-}
-
-.mockup img {
-    max-width: 100%;
-    height: auto;
-}
-.detalle-proyecto {
-    text-align: center; /* Centra el contenido del div */
-}
-
-.detalle-proyecto ul {
-    display: inline-block; /* Evita que la lista ocupe todo el ancho */
-    text-align: left; /* Mantiene el texto alineado a la izquierda dentro del bloque */
-    padding-left: 0; /* Elimina padding extra */
-}
-
-.detalle-proyecto li {
-    list-style: none; /* Elimina viñetas por defecto */
-    display: flex;
-    align-items: center; /* Alinea el check con el texto */
-    gap: 8px; /* Espaciado entre el check y el texto */
-}
 
 
-.detalle-proyecto, .habilidades {
-    max-width: 800px;
-    margin: auto;
-    padding: 40px 20px;
-    text-align: center;
-}
+
 .habilidades .iconos img {
     width: 50px;
     height: auto;
@@ -149,7 +98,7 @@ footer {
 }
 
 .cta {
-    margin: 30px;
+    margin: 20px;
 }
 
 .btn {
@@ -188,31 +137,85 @@ ul {
     color: #d57869; /* Color del check */
     font-size: 18px;
 }
+.portada-proyecto {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.mockup {
+    width: 100%;
+}
+
+.mockup img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrado vertical */
+    align-items: center; /* Centrado horizontal */
+    text-align: center; /* Alineación del texto */
+    min-height: 20vh; /* Ocupa toda la altura de la ventana */
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total */
+    background-color: #161616;
+}
+.contenido p{
+    color: #bbbbbb;}
+ .contenido h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}   
+
+
+
+
+.detalle-proyecto {
+    text-align: center; /* Centra el contenido del div */
+}
+
+.detalle-proyecto ul {
+    display: inline-block; /* Evita que la lista ocupe todo el ancho */
+    text-align: left; /* Mantiene el texto alineado a la izquierda dentro del bloque */
+    padding-left: 0; /* Elimina padding extra */
+}
+
+.detalle-proyecto li {
+    list-style: none; /* Elimina viñetas por defecto */
+    display: flex;
+    align-items: center; /* Alinea el check con el texto */
+    gap: 8px; /* Espaciado entre el check y el texto */
+}
+
+
+.detalle-proyecto, .habilidades {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+}
 @media (max-width: 768px) {
     .portada-proyecto {
         display: flex;
-        flex-direction: column-reverse; /* Invierte el orden en mobile */
+        flex-direction: column; 
         align-items: center;
         text-align: center;
         padding: 2px;
     }
-
-    .mockup img {
-        width: 100%; /* Asegura que la imagen no desborde */
-        height: 100% !important;
-        background: url("./recursos/./portadamobile.jpg")
-    }
-
     .contenido {
         margin-top: 20px;
     }
-    .detalle-proyecto ul {
-        width: 90%; /* Reduce el ancho en pantallas pequeñas */
-    }
-
-    .detalle-proyecto li {
-        font-size: 14px; /* Reduce el tamaño del texto si es necesario */
-        gap: 6px; /* Ajusta el espacio entre el check y el texto */
+    .mockup img {
+        width: 100%;
+        height: auto; /* Mantiene la proporción de la imagen */
+        display: block;
+        content: url("./recursos/portadamhum.jpg")
     }
     .contenido h1 {
         font-size: 2rem;
@@ -222,11 +225,21 @@ ul {
     }
     .contenido p {
         font-size: 1rem;
-        color: #ffffff;
+        color: #bbbbbb;
         margin-bottom: 20px;
     }
-  
+    .detalle-proyecto ul {
+        width: 90%; /* Reduce el ancho en pantallas pequeñas */
+    }
+
+    .detalle-proyecto li {
+        font-size: 14px; /* Reduce el tamaño del texto si es necesario */
+        gap: 6px; /* Ajusta el espacio entre el check y el texto */
+    }
 }
+
+
+
 .breadcrumb {
     background-color: #f8f9fa; /* Color de fondo suave */
     border-radius: 5px; /* Bordes redondeados */
@@ -255,3 +268,117 @@ ul {
     color: #6c757d; /* Color del separador */
     
 }
+.portada-proyecto-luxe {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.mockup-luxe {
+    width: 100%;
+}
+
+.mockup-luxe img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.contenido-luxe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrado vertical */
+    align-items: center; /* Centrado horizontal */
+    text-align: center; /* Alineación del texto */
+    min-height: 20vh; /* Ocupa toda la altura de la ventana */
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total */
+    background-color: #161616;
+}
+.contenido-luxe p{
+    color: #bbbbbb;}
+ .contenido-luxe h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}   
+.btn-luxe{
+    text-decoration: none;
+    background: #c5050d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px 0px;
+    transition: 0.3s;
+}
+.btn-luxe:hover {
+    background: #333333;
+}
+.lista-check-luxe i {
+    color: #c5050d; /* Color del check */
+    font-size: 18px;
+}
+
+.detalle-proyecto {
+    text-align: center; /* Centra el contenido del div */
+}
+
+.detalle-proyecto-luxe ul {
+    display: inline-block; /* Evita que la lista ocupe todo el ancho */
+    text-align: left; /* Mantiene el texto alineado a la izquierda dentro del bloque */
+    padding-left: 0; /* Elimina padding extra */
+}
+
+.detalle-proyecto-luxe li {
+    list-style: none; /* Elimina viñetas por defecto */
+    display: flex;
+    align-items: center; /* Alinea el check con el texto */
+    gap: 8px; /* Espaciado entre el check y el texto */
+}
+
+
+.detalle-proyecto-luxe, .habilidades {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .portada-proyecto-luxe {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+        padding: 2px;
+    }
+    .contenido-luxe {
+        margin-top: 20px;
+    }
+    .mockup-luxe img {
+        width: 100%;
+        height: auto; /* Mantiene la proporción de la imagen */
+        display: block;
+        content: url("./recursos/portada-luxe.jpg")
+    }
+    .contenido-luxe h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #ffffff;
+        text-align: center;
+    }
+    .contenido-luxe p {
+        font-size: 1rem;
+        color: #bbbbbb;
+        margin-bottom: 20px;
+    }
+    .detalle-proyecto-luxe ul {
+        width: 90%; /* Reduce el ancho en pantallas pequeñas */
+    }
+
+    .detalle-proyecto-luxe li {
+        font-size: 14px; /* Reduce el tamaño del texto si es necesario */
+        gap: 6px; /* Ajusta el espacio entre el check y el texto */
+    }
+}
+
