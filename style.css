@@ -409,3 +409,28 @@ ul {
 .btn-sona:hover {
     background: #333333;
 }
+
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    text-decoration: none; /* Quita el subrayado */
+    background-color: #25d366; /* Color verde de WhatsApp */
+    color: white; /* Texto en blanco */
+    font-size: 16px;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: #1da851; /* Color más oscuro al pasar el mouse */
+}
+
+/* Color diferente para el email */
+.boton:first-of-type {
+    background-color: #007bff; /* Azul */
+}
+
+.boton:first-of-type:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}
