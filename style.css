@@ -1,436 +1,617 @@
-body, html {
-    width: 100%;
-    overflow-x: hidden; /* Evita scroll horizontal */
-}
-/*--------------------------------------------- card index----------------------------------- */
-
-.card-link {
-    text-decoration: none !important; /* Quita el subrayado */
-    color: inherit !important; /* Mantiene el color original del texto */
-    display: block; /* Asegura que el enlace ocupe toda la card */
+/* =========================
+   RESET BÁSICO / GENERALES
+========================= */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.card-link .card {
-    transition: transform 0.2s ease-in-out;
-}
-
-.card-link .card:hover {
-    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
-}
-
-/* Imagen de fondo por defecto */
-header  {
-    background-image: url('https://raw.githubusercontent.com/SofiaCrivisqui/Portfolio/refs/heads/master/recursos/banner.jpg') !important;
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    height: 250px; /* Ajusta la altura según tus necesidades */
-}
-.titulo-grande {
-    font-size: 2em !important; /* Puedes ajustar el tamaño según tus necesidades */
-    color: #000000;
-}
-.texto-colorido { color: #2c2c2c;}
-
-/* Imagen de fondo para dispositivos móviles */
-@media (max-width: 768px) {
-    header  {
-        background-image: url('https://raw.githubusercontent.com/SofiaCrivisqui/Portfolio/refs/heads/master/recursos/bannermobile.jpg') !important;
-    }
-    .titulo-grande {
-        font-size: 1em !important; /* Puedes ajustar el tamaño según tus necesidades */
-        color: #000000;
-        padding: 30px
-    }
-    
-}
-
-footer {
-    background-color: #000000;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #000;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-
-
-
-.habilidades .iconos img {
-    width: 50px;
-    height: auto;
-    padding: 5px;
-}
-.cta {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.overlay {
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 20px;
-    width: 80%;
-    text-align: center;
-}
-
-.detalle-proyecto, .habilidades {
-    padding: 20px;
-}
-
-.habilidades .iconos {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.habilidades .iconos div {
-    text-align: center;
-}
-
-.cta {
-    margin: 20px;
-}
-
-.btn {
-    text-decoration: none;
-    background: #d57869;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin: 5px 0px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #333333;
+h2 {
+  margin-bottom: 1.5rem;
 }
 
 ul {
-    list-style-type: none; /* Elimina los puntos de la lista */
-    padding: 0; /* Elimina el padding por defecto */
+  list-style-type: none;
+  padding: 0;
 }
 
 
-.lista-check {
-    list-style: none;
-    padding: 0;
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-.lista-check li {
-    display: flex;
-    align-items: center; /* Alinea el ícono y el texto */
-    gap: 10px; /* Espaciado entre ícono y texto */
-    font-size: 16px;
+
+/* =========================
+   HEADER / BANNER
+========================= */
+.header {
+  color: rgb(10, 10, 10);
+  padding: 4rem 0;
+  background-image: url('https://raw.githubusercontent.com/SofiaCrivisqui/Portfolio/refs/heads/master/recursos/banner.jpg') !important;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  height: 250px;
+}
+
+.titulo-grande {
+  font-size: 2em !important;
+  color: #000000;
+}
+
+.texto-colorido {
+  color: #2c2c2c;
+}
+
+@media (max-width: 768px) {
+  .header {
+    background-image: url('https://raw.githubusercontent.com/SofiaCrivisqui/Portfolio/refs/heads/master/recursos/bannermobile.jpg') !important;
+  }
+
+  .titulo-grande {
+    font-size: 1em !important;
+    padding: 30px;
+  }
+}
+
+
+/* Modo oscuro */
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Asegurar que navbar, botones y otros elementos cambien también */
+.dark-mode .navbar {
+  background-color: #222 !important;
+}
+
+.dark-mode .nav-link {
+  color: #ddd !important;
+}
+
+.dark-mode .btn-outline-dark {
+  color: #eee;
+  border-color: #eee;
+}
+
+.dark-mode .btn-outline-dark:hover {
+  background-color: #444;
+  color: white;
+}
+
+/* También ajustar secciones, footer, etc. según convenga */
+.dark-mode footer {
+  background-color: #222;
+  color: #ccc;
+}
+
+/* Si tienes cards u otros bloques que requieren fondo */
+.dark-mode .card {
+  background-color: #333;
+  color: #eee;
+  border-color: #444;
+}
+
+
+/* =========================
+   Estilos específicos para modo oscuro en páginas de proyecto
+========================= */
+
+/* Modo oscuro general */
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Navbar en modo oscuro */
+.dark-mode .navbar {
+  background-color: #222 !important;
+}
+
+.dark-mode .navbar .navbar-brand,
+.dark-mode .navbar .nav-link {
+  color: #ddd !important;
+}
+
+.dark-mode .navbar .nav-link:hover {
+  color: #fff !important;
+}
+
+/* Botones personalizados en modo oscuro */
+.dark-mode .btn-luxe {
+  background-color: #a0040a;
+  color: white;
+  border: none;
+}
+
+.dark-mode .btn-luxe:hover {
+  background-color: #7a0307;
+  color: white;
+}
+
+
+/* =========================
+   FLOTANTES
+========================= */
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.floating-btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  background-color: #25d366;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.floating-btn a.email {
+  background-color: #007bff;
+}
+
+.floating-btn a:hover {
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   TARJETAS / PROYECTOS
+========================= */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-link {
+  text-decoration: none !important;
+  color: inherit !important;
+  display: block;
+}
+
+.card-link .card {
+  transition: transform 0.2s ease-in-out;
+}
+
+.card-link .card:hover {
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   SECCIONES Y COMPONENTES
+========================= */
+footer {
+  background-color: #000000;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.cta {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 20px;
+  width: 80%;
+  text-align: center;
+}
+
+
+/* =========================
+   LISTAS CON ICONOS
+========================= */
+.lista-check,
+.lista-check-luxe {
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+  text-align: left;
+}
+
+.lista-check li,
+.lista-check-luxe li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
 }
 
 .lista-check i {
-    color: #d57869; /* Color del check */
-    font-size: 18px;
-}
-.lista-check {
-    display: inline-block; /* Hace que la lista se ajuste al contenido y respete el centrado */
-    text-align: left; /* Mantiene la alineación del texto dentro de la lista */
-    list-style: none; /* Elimina los estilos predeterminados de la lista */
-    padding: 0; /* Elimina el padding predeterminado */
+  color: #d57869;
+  font-size: 18px;
 }
 
-.portada-proyecto {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    
+.lista-check-luxe i {
+  color: #c5050d;
+  font-size: 18px;
 }
 
+
+/* =========================
+   PROYECTO – MHUM
+========================= */
+.portada-proyecto,
 .mockup {
-    width: 100%;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .mockup img {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: auto;
+  display: block;
 }
+
 .contenido {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centrado vertical */
-    align-items: center; /* Centrado horizontal */
-    text-align: center; /* Alineación del texto */
-    min-height: 20vh; /* Ocupa toda la altura de la ventana */
-    padding: 20px; /* Espaciado interno */
-    box-sizing: border-box; /* Incluye el padding en el tamaño total */
-    background-color: #181818;
-}
-.contenido p{
-    color: #bbbbbb;}
- .contenido h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #ffffff;
-}   
-
-
-
-
-
-.detalle-proyecto {
-    
-    text-align: center !important; /* Centra el contenido dentro del div */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra los elementos horizontalmente */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 20vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #181818;
 }
 
-.detalle-proyecto ul {
-    display: inline-block; /* Evita que la lista ocupe todo el ancho */
-    text-align: left; /* Mantiene el texto alineado a la izquierda dentro del bloque */
-    padding-left: 0; /* Elimina padding extra */
+.contenido h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
 }
 
-.detalle-proyecto li {
-    list-style: none; /* Elimina viñetas por defecto */
-    display: flex;
-    align-items: center; /* Alinea el check con el texto */
-    gap: 8px; /* Espaciado entre el check y el texto */
+.contenido p {
+  color: #bbbbbb;
+}
+.btn-proyecto {
+  background-color: #f58d6e;
+ 
+  color: white;
+  border: none;
+}
+
+.btn-proyecto:hover {
+  background-color: #f1d5cc;
+  color: #fff;
 }
 
 
-.detalle-proyecto, .habilidades {
-    max-width: 800px;
-    margin: auto;
-    padding: 40px 20px;
-    text-align: center;
-}
-@media (max-width: 768px) {
-    .portada-proyecto {
-        display: flex;
-        flex-direction: column; 
-        align-items: center;
-        text-align: center;
-        padding: 2px;
-    }
-    
-    .mockup img {
-        width: 100%;
-        height: auto; /* Mantiene la proporción de la imagen */
-        display: block;
-        content: url("./recursos/portadamhum.jpg")
-    }
-    .contenido h1 {
-        font-size: 2rem;
-        margin-bottom: 20px;
-        color: #ffffff;
-        text-align: center;
-    }
-    .contenido p {
-        font-size: 1rem;
-        color: #bbbbbb;
-        margin-bottom: 20px;
-    }
-    .detalle-proyecto ul {
-        width: 90%; /* Reduce el ancho en pantallas pequeñas */
-    }
-
-    .detalle-proyecto li {
-        font-size: 14px; /* Reduce el tamaño del texto si es necesario */
-        gap: 6px; /* Ajusta el espacio entre el check y el texto */
-    }
-    .detalle-proyecto{ text-align: center !important;}
-}
-
-
-
-
-.breadcrumb {
-    background-color: #f8f9fa; /* Color de fondo suave */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 0.5rem 1rem; /* Espaciado interno */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-}
-
-.breadcrumb-item a {
-    color: #343a40; /* Color de los enlaces */
-    text-decoration: none; /* Sin subrayado */
-    font-weight: 300; /* Grosor del texto */
-    transition: color 0.3s ease; /* Efecto suave al pasar el mouse */
-}
-
-.breadcrumb-item a:hover {
-    color: #d5786a; /* Color del enlace al pasar el mouse */
-}
-
-.breadcrumb-item.active {
-    color: #6c757d; /* Color del texto del elemento activo */
-    font-weight: bold; /* Texto más destacado */
-}
-
-.breadcrumb-item + .breadcrumb-item::before {
-    content: '>'; /* Cambia el separador por un símbolo mayor que */
-    color: #6c757d; /* Color del separador */
-    
-}
-.portada-proyecto-luxe {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    
-}
-
+/* =========================
+   PROYECTO – LUXE
+========================= */
+.portada-proyecto-luxe,
 .mockup-luxe {
-    width: 100%;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .mockup-luxe img {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: auto;
+  display: block;
 }
+
 .contenido-luxe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 20vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #161616;
+}
+
+.contenido-luxe h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.contenido-luxe p {
+  color: #bbbbbb;
+}
+.btn-luxe {
+  background-color: #c5050d; /* rojo fuerte */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.btn-luxe:hover {
+  background-color: #a0040a; /* un rojo más oscuro para hover */
+  color: white;
+  text-decoration: none;
+}
+
+
+
+/* =========================
+   DETALLES DE PROYECTOS
+========================= */
+.detalle-proyecto,
+.detalle-proyecto-luxe,
+.habilidades {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.detalle-proyecto ul,
+.detalle-proyecto-luxe ul {
+  display: inline-block;
+  text-align: left;
+  padding-left: 0;
+}
+
+.detalle-proyecto li,
+.detalle-proyecto-luxe li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+/* =========================
+   HABILIDADES
+========================= */
+.habilidades .iconos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.habilidades .iconos div {
+  text-align: center;
+}
+
+.habilidades .iconos img {
+  width: 50px;
+  height: auto;
+  padding: 5px;
+}
+
+
+/* =========================
+   MEDIA QUERIES
+========================= */
+@media (max-width: 768px) {
+  .portada-proyecto,
+  .portada-proyecto-luxe {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centrado vertical */
-    align-items: center; /* Centrado horizontal */
-    text-align: center; /* Alineación del texto */
-    min-height: 20vh; /* Ocupa toda la altura de la ventana */
-    padding: 20px; /* Espaciado interno */
-    box-sizing: border-box; /* Incluye el padding en el tamaño total */
-    background-color: #161616;
-}
-.contenido-luxe p{
-    color: #bbbbbb;}
- .contenido-luxe h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #ffffff;
-}   
-.btn-luxe{
-    text-decoration: none;
-    background: #c5050d;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin: 5px 0px;
-    transition: 0.3s;
-}
-.btn-luxe:hover {
-    background: #333333;
-}
-.lista-check-luxe i {
-    color: #c5050d; /* Color del check */
-    font-size: 18px;
-}
-
-.detalle-proyecto {
-    text-align: center; /* Centra el contenido del div */
-}
-
-.detalle-proyecto-luxe ul {
-    display: inline-block; /* Evita que la lista ocupe todo el ancho */
-    text-align: left; /* Mantiene el texto alineado a la izquierda dentro del bloque */
-    padding-left: 0; /* Elimina padding extra */
-}
-
-.detalle-proyecto-luxe li {
-    list-style: none; /* Elimina viñetas por defecto */
-    display: flex;
-    align-items: center; /* Alinea el check con el texto */
-    gap: 8px; /* Espaciado entre el check y el texto */
-}
-
-
-.detalle-proyecto-luxe, .habilidades {
-    max-width: 800px;
-    margin: auto;
-    padding: 40px 20px;
+    align-items: center;
     text-align: center;
-}
-@media (max-width: 768px) {
-    .portada-proyecto-luxe {
-        display: flex;
-        flex-direction: column; 
-        align-items: center;
-        text-align: center;
-        padding: 2px;
-    }
-    
-    .mockup-luxe img {
-        width: 100%;
-        height: auto; /* Mantiene la proporción de la imagen */
-        display: block;
-        content: url("./recursos/portada-luxe.jpg")
-    }
-    .contenido-luxe h1 {
-        font-size: 2rem;
-        margin-bottom: 20px;
-        color: #ffffff;
-        text-align: center;
-    }
-    .contenido-luxe p {
-        font-size: 1rem;
-        color: #bbbbbb;
-        margin-bottom: 20px;
-    }
-    .detalle-proyecto-luxe ul {
-        width: 90%; /* Reduce el ancho en pantallas pequeñas */
-    }
+    padding: 2px;
+  }
 
-    .detalle-proyecto-luxe li {
-        font-size: 14px; /* Reduce el tamaño del texto si es necesario */
-        gap: 6px; /* Ajusta el espacio entre el check y el texto */
-    }
-    .mockup-sona img {
-        width: 100%;
-        height: auto; /* Mantiene la proporción de la imagen */
-        display: block;
-        content: url("./recursos/portadasona.jpg")
+  .mockup img {
+    content: url("./recursos/portadamhum.jpg");
+  }
+
+  .mockup-luxe img {
+    content: url("./recursos/portada-luxe.jpg");
+  }
+
+  .mockup-sona img {
+    content: url("./recursos/portadasona.jpg");
+  }
+
+  .contenido h1,
+  .contenido-luxe h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .contenido p,
+  .contenido-luxe p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .detalle-proyecto ul,
+  .detalle-proyecto-luxe ul {
+    width: 90%;
+  }
+
+  .detalle-proyecto li,
+  .detalle-proyecto-luxe li {
+    font-size: 14px;
+    gap: 6px;
+  }
 }
+
+
+/* =========================
+   BREADCRUMB
+========================= */
+.breadcrumb {
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.btn-sona{
-    text-decoration: none;
-    background: #03f551;
-    color: rgb(0, 0, 0);
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin: 5px 0px;
-    transition: 0.3s;
+
+.breadcrumb-item a {
+  color: #343a40;
+  text-decoration: none;
+  font-weight: 300;
+  transition: color 0.3s ease;
 }
+
+.breadcrumb-item a:hover {
+  color: #d5786a;
+}
+
+.breadcrumb-item.active {
+  color: #6c757d;
+  font-weight: bold;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: '>';
+  color: #6c757d;
+}
+
+/* ====== BOTÓN PERSONALIZADO SONA ====== */
+.btn-sona {
+  background-color: #03f551;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
 .btn-sona:hover {
-    background: #333333;
+  background-color: #00c83d;
+  color: white;
 }
 
-.boton {
-    display: inline-block;
+/* ====== MODO OSCURO ====== */
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode .navbar {
+  background-color: #222 !important;
+}
+
+.dark-mode .navbar .navbar-brand,
+.dark-mode .navbar .nav-link {
+  color: #ddd !important;
+}
+
+.dark-mode .navbar .nav-link:hover {
+  color: #fff !important;
+}
+
+.dark-mode .btn-sona {
+  background-color: #00c83d;
+  color: white;
+}
+
+.dark-mode .btn-sona:hover {
+  background-color: #00a02e;
+}
+.section-sona {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 80px;
+  gap: 40px;
+}
+
+/* Texto ocupa menos espacio, imagen más */
+.contenido-luxe {
+  flex: 1 1 100%;
+  max-width: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+
+.mockup-sona {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+
+.contenido-luxe h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.contenido-luxe p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.btn-sona {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #24d10e;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.mockup-sona img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* 🟢 Media Query para móviles */
+@media (max-width: 768px) {
+  .section-sona {
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 30px;
+  }
+
+  .contenido-luxe,
+  .mockup-sona {
+    max-width: 100%;
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .contenido-luxe h1 {
+    font-size: 1.8em;
+  }
+
+  .contenido-luxe p {
+    font-size: 1em;
+  }
+
+  .btn-sona {
+    font-size: 1em;
     padding: 10px 20px;
-    margin: 10px 0;
-    text-decoration: none; /* Quita el subrayado */
-    background-color: #25d366; /* Color verde de WhatsApp */
-    color: white; /* Texto en blanco */
-    font-size: 16px;
-    border-radius: 5px; /* Bordes redondeados */
-    transition: 0.3s;
+  }
 }
 
-.boton:hover {
-    background-color: #1da851; /* Color más oscuro al pasar el mouse */
-}
-
-/* Color diferente para el email */
-.boton:first-of-type {
-    background-color: #007bff; /* Azul */
-}
-
-.boton:first-of-type:hover {
-    background-color: #0056b3; /* Azul más oscuro */
-}

@@ -1,98 +1,153 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sofia Crivisqui| Mi Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sofía Crivisqui | Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Sofía Crivisqui</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre Mí</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-                </ul>
+  
+
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Sofía Crivisqui</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre Mí</a></li>
+        <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- Botón de modo oscuro dentro del navbar -->
+    <button id="themeToggle" class="btn btn-outline-dark ms-3">
+      <i class="fas fa-moon"></i>
+    </button>
+  </div>
+</nav>
+
+  
+  <!-- Header -->
+  <header class="text-center header" data-aos="fade-down">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Bienvenidos a mi Portfolio</h1>
+      <p class="lead">Desarrolladora Web | UX/UI | HTML | CSS | Bootstrap | JavaScript</p>
+    </div>
+  </header>
+
+
+  <!-- Sobre Mí -->
+  <section id="sobre-mi" class="container py-5" data-aos="fade-up">
+    <h2 class="text-center">Sobre Mí</h2>
+    <p>Soy una <strong>desarrolladora web con enfoque en UX/UI</strong>. Me especializo en crear experiencias digitales que combinan estética y funcionalidad. Utilizo herramientas como <strong>Figma</strong> para diseñar wireframes y prototipos interactivos.</p>
+    <p>También domino <strong>Photoshop</strong> e <strong>Illustrator</strong>, lo que me permite convertir ideas en diseños efectivos. Me enfoco en cada detalle para lograr interfaces claras y amigables.</p>
+    <p>Siempre estoy buscando nuevos desafíos para seguir aprendiendo, aportar soluciones creativas y mejorar la experiencia del usuario.</p>
+  </section>
+
+  <!-- Proyectos -->
+    <section id="proyectos" class="container py-5" data-aos="fade-up">
+    <h2 class="text-center">Proyectos</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <a href="mhum.html" class="text-decoration-none text-dark">
+          <div class="card h-100">
+            <img src="./recursos/mhum.jpg" class="card-img-top" alt="Mhum">
+            <div class="card-body">
+              <h5 class="card-title">Mhum | Catálogo Digital</h5>
+              <p class="card-text">Diseño y desarrollo de catálogo web para Mhum, marca de ropa interior y bikinis. Desde identidad gráfica hasta funcionalidad web optimizada.</p>
             </div>
-        </div>
-    </nav>
-
-    <header class="bg-primary text-white text-center py-5">
-        <h1 class="titulo-grande">Bienvenidos a mi Portfolio</h1>
-        <p class="texto-colorido">Desarrolladora Web | HTML | CSS | JavaScript | Bootstrap | Desarrolladora UX/UI</p>
-    </header>
-
-    <section id="sobre-mi" class="container my-5">
-        <h2>Sobre Mí</h2>
-        <p>Soy una <b>desarrolladora web con enfoque en UX/UI</b> Me especializo en crear experiencias digitales que combinan estética y funcionalidad. A través del diseño centrado en el usuario, trabajo con herramientas como <b>Figma</b> para desarrollar wireframes y prototipos interactivos que permiten validar ideas y mejorar la usabilidad desde las primeras etapas del proyecto.</p>
-        <p>Tengo experiencia en herramientas como <b>Photoshop e Illustrator</b>, lo que me permite dar forma a ideas y transformarlas en diseños claros y efectivos. Disfruto del proceso de pensar cada detalle de la interfaz para mejorar la interacción y usabilidad.
-        </p>
-        <p>Siempre estoy en busca de nuevos desafíos que me permitan seguir aprendiendo, aportar soluciones creativas y mejorar la experiencia de las personas a través del diseño y el desarrollo web.</p>
-    </section>
-    <section id="proyectos" class="container my-5">
-        <h2>Proyectos</h2>
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <a href="mhum.html" class="card-link">
-                    <div class="card">
-                        <img src="./recursos/mhum.jpg" class="card-img-top" alt="Proyecto 1">
-                        <div class="card-body">
-                            <h5 class="card-title"> Mhum | Cátalogo Digital</h5>
-                            <p class="card-text">Desarrollo integral de la identidad digital de Mhum, una marca de ropa
-                                interior, pijamas y bikinis. Mi labor abarca desde el diseño gráfico hasta la creación y
-                                optimización del catálogo web, asegurando una presencia digital atractiva y funcional.
-                            </p>
-                        </div>
-                    </div>
-                </a>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="luxeperfil.html" class="text-decoration-none text-dark">
+          <div class="card h-100">
+            <img src="./recursos/luxeperfil.jpg" class="card-img-top" alt="Luxe Perfil">
+            <div class="card-body">
+              <h5 class="card-title">Luxe Perfil | Website</h5>
+              <p class="card-text">Proyecto final en Coderhouse. Diseño responsivo y desarrollo de sitio web en HTML, CSS, Sass y Bootstrap.</p>
             </div>
-            <div class="col-md-4 mb-4">
-                <a href="luxeperfil.html" class="card-link">
-                    <div class="card">
-                        <img src="./recursos/luxeperfil.jpg" class="card-img-top" alt="Proyecto 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Luxe Perfil| Web Site </h5>
-                            <p class="card-text">Proyecto final del curso de Desarrollo web, parte de la carrera de
-                                Desarrollo UX/UI en Coderhouse. 5 secciones de la página web de Luxe Perfil Argentina,
-                                aplicando HTML, CSS, Sass, Boostrap y diseño responsivo.</p>
-                        </div>
-                    </div>
-                </a>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="./sona.html" class="text-decoration-none text-dark">
+          <div class="card h-100">
+            <img src="./recursos/sona.jpg" class="card-img-top" alt="Sona App">
+            <div class="card-body">
+              <h5 class="card-title">Sona Finanzas Personales | App</h5>
+              <p class="card-text">Diseño UX/UI y prototipo en Figma para una app financiera. Interfaz intuitiva para gestionar ingresos y gastos.</p>
             </div>
-            <div class="col-md-4 mb-4">
-                <a href="./sona.html" class="card-link">
-                    <div class="card">
-                        <img src="./recursos/sona.jpg" class="card-img-top" alt="Proyecto 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Sona Finanzas personales | App </h5>
-                            <p class="card-text">Proyecto de diseño UX/UI y prototipado en Figma para una aplicación de finanzas personales. Se desarrolló una interfaz intuitiva y accesible que permite a los usuarios gestionar sus ingresos, gastos y ahorros de manera eficiente.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <section id="contacto" class="container my-5"> 
-        <h2>Contacto</h2>
-        <a href="mailto:crivisquisofia@gmail.com" class="boton">📧 Contacto por Email</a>
-        <a href="https://wa.me/5493513726257" target="_blank" class="boton">💬 Enviar mensaje por WhatsApp</a>
-    </section>
+  <!-- Contacto -->
+  <section id="contacto" class="container py-5 text-center">
+    <h2>Contacto</h2>
+    <p>¿Querés trabajar conmigo o tenés alguna consulta?</p>
+    <a href="mailto:crivisquisofia@gmail.com" class="btn btn-primary me-2"><i class="fa-solid fa-envelope"></i> Contacto por Email</a>
+    <a href="https://wa.me/5493513726257" target="_blank" class="btn btn-success"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Sofia Crivisqui | Mi Portfolio . Todos los derechos reservados.</p>
-    </footer>
+  <!-- Botones Flotantes -->
+  <div class="floating-btn">
+    <a href="mailto:crivisquisofia@gmail.com" class="email" title="Enviar Email">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+    <a href="https://wa.me/5493513726257" target="_blank" title="Enviar WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Sofía Crivisqui | Portfolio. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  
+  <script>
+    AOS.init();
+
+    // Toggle oscuro/claro
+    const toggle = document.getElementById('themeToggle');
+    const body = document.body;
+    const icon = toggle.querySelector('i');
+
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        body.classList.add('dark-mode');
+        icon.classList.replace('fa-moon', 'fa-sun');
+      } else {
+        body.classList.remove('dark-mode');
+        icon.classList.replace('fa-sun', 'fa-moon');
+      }
+    }
+
+    // Inicial según preferencia
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setTheme(prefersDark ? 'dark' : 'light');
+
+    toggle.addEventListener('click', () => {
+      const isDark = body.classList.contains('dark-mode');
+      setTheme(isDark ? 'light' : 'dark');
+    });
+  </script>
 </body>
-
 </html>
