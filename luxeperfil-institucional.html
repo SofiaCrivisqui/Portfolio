@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofia Crivisqui | Mi Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="./index.html">Sofía Crivisqui</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="./index.html#sobre-mi">Sobre Mí</a></li>
+        <li class="nav-item"><a class="nav-link" href="./index.html#proyectos">Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link" href="./index.html#contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <button id="themeToggle" class="btn btn-outline-light ms-3" type="button">
+      <i class="fas fa-moon"></i>
+    </button>
+  </div>
+</nav>
+
+    </nav>
+     <!-- Breadcrumb -->
+   <nav aria-label="breadcrumb" class="bg-light py-2">
+    <div class="container">
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="./index.html">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="./index.html#proyectos">Mis proyectos</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Luxe Perfil Institucional</li>
+        </ol>
+    </div>
+</nav>
+    <section class="portada-proyecto-luxe">
+        
+        <div class="contenido-luxe">
+            <h1>Web Site| Luxe Perfil Argentina </h1>
+            <p>Luxe Perfil es una fabrica metalurgica Argentina de Persianas , portones y mosquiteros .</p>
+            <a href="https://luxeperfil.com.ar/" target="_blank" class="btn-luxe">Ver Pagina web</a>
+        </div>
+        <div class="mockup-luxe">
+            <img src="./recursos/portada-luxe-institucional.jpg" alt="Mockup de web site Luxe">
+        </div>
+    </section>
+
+        <div class="detalle-proyecto-luxe">
+            <h2>Sobre el Proyecto</h2>
+            <p>Luxe Perfil necesitaba una propuesta de renovacion de pagina web.</p>
+            <ul class="lista-check-luxe">
+                <li><i class="fa-solid fa-check"></i> Diseño responsive para todas las secciones</li>
+                <li><i class="fa-solid fa-check"></i> Integración de formulario de contacto </li>
+                <li><i class="fa-solid fa-check"></i>  Presentación de productos destacados en la página principal</li>
+                <li><i class="fa-solid fa-check"></i> Sección de descargas para catálogos y recursos</li>
+                <li><i class="fa-solid fa-check"></i>  Estética alineada con la identidad de marca</li>
+            </ul>
+        </div>
+
+        <div class="habilidades">
+            <h2>Habilidades Aplicadas</h2>
+            <div class="iconos">
+                <div>
+                    <img src="./recursos/html.jpg" alt="HTML">
+                    <p>HTML5</p>
+                </div>
+                <div>
+                    <img src="./recursos/css.jpg" alt="CSS">
+                    <p>CSS3</p>
+                </div>
+                <div>
+                    <img src="./recursos/java.jpg" alt="JavaScript">
+                    <p>JavaScript</p>
+                </div>
+                <div>
+                    <img src="./recursos/xd.jpg" alt="Figma">
+                    <p>Adobe XD (UI/UX)</p>
+                </div>
+            </div>
+        </div>
+
+      <div class="cta-container">
+    <div class="cta">
+        <a href="https://luxeperfil.com.ar/" target="_blank" class="btn-luxe custom-btn">Ver Página web</a>
+    </div>
+    <div class="cta">
+        <a href="https://xd.adobe.com/view/57ad258c-9531-4149-8fe6-dd4e51e96e23-02fe/" target="_blank" class="btn-luxe custom-btn">Ver Prototipo</a>
+    </div>
+</div>
+
+    </section>
+    <footer>
+        <p>&copy; 2025 Sofia Crivisqui | Mi Portfolio . Todos los derechos reservados.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const toggle = document.getElementById('themeToggle');
+  const body = document.body;
+  const icon = toggle.querySelector('i');
+
+  function setTheme(theme) {
+    if (theme === 'dark') {
+      body.classList.add('dark-mode');
+      icon.classList.replace('fa-moon', 'fa-sun');
+    } else {
+      body.classList.remove('dark-mode');
+      icon.classList.replace('fa-sun', 'fa-moon');
+    }
+  }
+
+  // Detectar preferencia de tema del sistema al cargar la página
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  setTheme(prefersDark ? 'dark' : 'light');
+
+  // Cambiar tema al hacer click
+  toggle.addEventListener('click', () => {
+    const isDark = body.classList.contains('dark-mode');
+    setTheme(isDark ? 'light' : 'dark');
+  });
+</script>
+
+
+</body>
+</html>

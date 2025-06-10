@@ -615,3 +615,20 @@ footer {
   }
 }
 
+.cta-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente si es necesario */
+    gap: 10px; /* Espacio entre botones */
+}
+
+
+.custom-btn {
+    background-color: #d3250e; /* Color diferente */
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+}
+
