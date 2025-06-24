@@ -632,3 +632,27 @@ footer {
     margin: 10px;
 }
 
+.btn-palabra {
+  background-color: #5B2C6F; /* Un violeta profundo simbólico */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* ✅ SACA EL SUBRAYADO */
+   display: inline-block;
+   margin: 20px;
+}
+
+.btn-palabra:hover {
+  background-color: #7D3C98; /* Un tono más claro para hover */
+  color: #fff;
+}
+.cta-botones {
+  display: flex;
+  gap: 20px; /* Espacio entre botones */
+  justify-content: center; /* Centra horizontalmente */
+  flex-wrap: wrap; /* Se apilan en mobile */
+  margin-top: 20px;
+}
