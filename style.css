@@ -656,3 +656,54 @@ footer {
   flex-wrap: wrap; /* Se apilan en mobile */
   margin-top: 20px;
 }
+
+
+
+  .hero-video-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero-video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .hero-video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* sombra oscura para legibilidad */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 1;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero-video-overlay h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero-video-overlay p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .hero-video-container video {
+  object-fit: contain;
+  background-color: black;
+}
