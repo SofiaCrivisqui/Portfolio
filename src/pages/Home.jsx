@@ -16,7 +16,7 @@ const projects = [
   {
     name: "Palabra y Abismo",
     description: "Blog temático de psicoanálisis y filosofía con diseño simbólico e interactivo.",
-    image: "/public/img/palabrayabismo.jpg",
+    image: "/https://github.com/SofiaCrivisqui/Portfolio/blob/gh-pages/public/img/atriaestudio.jpg",
     link: "https://sofiacrivisqui.github.io/palabrayabisimo/",
     tags: ["Psicoanálisis", "UI personalizada", "Filosofía"]
   },
@@ -53,7 +53,7 @@ export default function Home() {
           playsInline
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
         >
-          <source src="public/videos/fondo.mp4" type="video/mp4" />
+          <source src="http://github.com/SofiaCrivisqui/Portfolio/blob/gh-pages/public/videos/fondo.mp4" type="video/mp4" />
           Tu navegador no soporta video HTML5.
         </video>
 
