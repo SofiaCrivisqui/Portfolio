@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofia Crivisqui /Mi Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="./index.html">Sofía Crivisqui</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="./index.html#sobre-mi">Sobre Mí</a></li>
+        <li class="nav-item"><a class="nav-link" href="./index.html#proyectos">Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link" href="./index.html#contacto">Contacto</a></li>
+      </ul>
+      <!-- Botón de modo oscuro -->
+      <button id="themeToggle" class="btn btn-outline-light ms-3">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+     <!-- Breadcrumb -->
+   <nav aria-label="breadcrumb" class="bg-light py-2">
+    <div class="container">
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="./index.html">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="./index.html#proyectos">Mis proyectos</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Palabra y Abismo</li>
+        </ol>
+    </div>
+</nav>
+    <section class="portada-proyecto">
+        <div class="contenido">
+            <h1>Palabra y Abismo | Sitio Temático UX/UI</h1>
+            <p>Diseño y desarrollo de sitio web reflexivo sobre psicoanálisis y filosofía. De la identidad visual simbólica al enfoque UX responsive y accesible. Incluye ilustraciones, arquitectura clara y experiencia inmersiva.</p>
+            <a href="https://sofiacrivisqui.github.io/palabrayabisimo/" target="_blank" class="btn-palabra">Ver Proyecto</a>
+
+
+        </div>
+        <div class="mockup">
+            <img src="./recursos/portada-palabra2.png" alt="Mockup de palabra y Abismo">
+        </div>
+    </section>
+
+        <div class="detalle-proyecto">
+            <h2>Sobre el Proyecto</h2>
+            <p>Palabra y Abismo necesitaba una web visualmente atractiva y accesible para difundir contenidos de psicoanálisis y filosofía contemporánea, conectando con una audiencia joven interesada en el pensamiento crítico y el mundo interior..</p>
+            <ul class="lista-check">
+                <li><i class="fa-solid fa-check"></i> Diseño responsive con enfoque mobile-first</li>
+                <li><i class="fa-solid fa-check"></i> Navegación clara con arquitectura jerárquica</li>
+                <li><i class="fa-solid fa-check"></i> Secciones temáticas con visuales simbólicos</li>
+                <li><i class="fa-solid fa-check"></i> Experiencia inmersiva y minimalista</li>
+                <li><i class="fa-solid fa-check"></i> Identidad visual coherente con el universo conceptual</li>
+            </ul>
+        </div>
+
+        <div class="habilidades">
+            <h2>Habilidades Aplicadas</h2>
+            <div class="iconos">
+                <div>
+                    <img src="./recursos/html.jpg" alt="HTML">
+                    <p>HTML5</p>
+                </div>
+                <div>
+                    <img src="./recursos/css.jpg" alt="CSS">
+                    <p>CSS3 (con Bootstrap & Tailwind)</p>
+                </div>
+                <div>
+                    <img src="./recursos/java.jpg" alt="JavaScript">
+                    <p>JavaScript</p>
+                </div>
+                <div>
+                    <img src="./recursos/figma.jpg" alt="Figma">
+                    <p>Figma (UI/UX)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-botones">
+  <a href="https://sofiacrivisqui.github.io/palabrayabisimo/" target="_blank" class="btn-palabra">Ver Proyecto</a>
+  <a href="./recursos/reporte+ux-palabrayabismo-comprimido.pdf" target="_blank" class="btn-palabra">Ver reporte UX/UI</a>
+  <a href="./recursos/reporte-metodologia-palabrayabismo.pdf" target="_blank" class="btn-palabra">Ver metodologías ágiles</a>
+</div>
+
+    </section>
+    <footer>
+        <p>&copy; 2025 Sofia Crivisqui | Mi Portfolio . Todos los derechos reservados.</p>
+    </footer>
+    <!-- Bootstrap Bundle con Popper (necesario para navbar hamburguesa) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+  const toggle = document.getElementById('themeToggle');
+  const body = document.body;
+  const icon = toggle.querySelector('i');
+
+  function setTheme(theme) {
+    if (theme === 'dark') {
+      body.classList.add('dark-mode');
+      icon.classList.replace('fa-moon', 'fa-sun');
+    } else {
+      body.classList.remove('dark-mode');
+      icon.classList.replace('fa-sun', 'fa-moon');
+    }
+  }
+
+  // Aplicar según preferencia del sistema
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  setTheme(prefersDark ? 'dark' : 'light');
+
+  toggle.addEventListener('click', () => {
+    const isDark = body.classList.contains('dark-mode');
+    setTheme(isDark ? 'light' : 'dark');
+  });
+</script>
+
+
+</body>
+</html>
