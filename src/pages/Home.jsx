@@ -9,14 +9,14 @@ const projects = [
   {
     name: "Base Cero",
     description: "Servicios digitales para emprendedores: landing pages, asesoramiento, análisis NPS.",
-    image: "/Portfolio/img/basecero.jpg",
+    image: "/public/img/basecero.jpg",
     link: "https://baseceroup.com",
     tags: ["UX/UI", "Responsive", "Tailwind"]
   },
   {
     name: "Palabra y Abismo",
     description: "Blog temático de psicoanálisis y filosofía con diseño simbólico e interactivo.",
-    image: "/img/palabrayabismo.jpg",
+    image: "/public/img/palabrayabismo.jpg",
     link: "https://sofiacrivisqui.github.io/palabrayabisimo/",
     tags: ["Psicoanálisis", "UI personalizada", "Filosofía"]
   },
@@ -30,7 +30,7 @@ const projects = [
   {
     name: "Atria-Estudio",
     description: "Landing visual para estudio de arquitectura. Mockups realistas y enfoque premium.",
-    image: "/img/atriaestudio.jpg",
+    image: "/public/img/atriaestudio.jpg",
     link: "https://sofiacrivisqui.github.io/atriaestudio/",
     tags: ["Minimalismo", "Portafolio visual", "Diseño arquitectónico"]
   }
@@ -53,7 +53,7 @@ export default function Home() {
           playsInline
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
         >
-          <source src="/Portfolio/videos/fondo.mp4" type="video/mp4" />
+          <source src="public/videos/fondo.mp4" type="video/mp4" />
           Tu navegador no soporta video HTML5.
         </video>
 
